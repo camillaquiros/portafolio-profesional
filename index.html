@@ -1,0 +1,372 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Profesional | Camilla Quirós</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    .hidden { display: none; }
+    .mensaje-exito {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 6px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .mensaje-exito.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .mensaje-exito.oculto {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>Camilla Quirós Torres</h1>
+    <p>Ingeniera en Software | Desarrollo Web y Cloud</p>
+  </header>
+
+  <nav data-aos="fade">
+    <ul>
+      <li><a href="#contacto-directo">Contacto</a></li>
+      <li><a href="#acerca">Acerca de mí</a></li>
+      <li><a href="#tecnicas">Habilidades Técnicas</a></li>
+      <li><a href="#blandas">Habilidades Blandas</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="contacto-directo">
+      <h2>Información de contacto</h2>
+      <div class="contact-container">
+        <img src="assets/img/CamillaQuiros.jpg" alt="Foto de Camilla Quirós" class="profile-pic" />
+        <ul>
+          <li><strong>Nombre:</strong> Camilla Quirós Torres</li>
+          <li><strong>Correo:</strong> <a href="mailto:cquiros626@gmail.com">cquiros626@gmail.com</a></li>
+          <li><strong>Teléfono:</strong> +506 8304-1426</li>
+          <li><strong>Ubicación:</strong> San José, Costa Rica</li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/camilla-quirós-05842222b/" target="_blank">linkedin.com/in/camilla-quirós-05842222b</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/camillaquiros" target="_blank">github.com/camillaquiros</a></li>
+        </ul>
+      </div>
+
+      <div class="form-toggle-wrapper">
+        <button class="dropdown-toggle" onclick="toggleForm()">¡Contáctame!</button>
+        <div id="form-container" class="hidden">
+          <form class="contact-form" action="https://formsubmit.co/cquiros626@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="gracias.html">
+
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+
+            <div id="mensaje-exito" class="mensaje-exito oculto">
+              ✅ ¡Gracias por tu mensaje! Te responderé pronto.
+            </div>
+          </form>
+        </div>
+      </div>
+      <section id="acerca">
+  <h2>Acerca de mí</h2>
+  <p class="about-text">
+    ¡Hola! Soy Camilla Quirós, una ingeniera en software apasionada por el desarrollo web, el análisis de datos y la nube. Actualmente trabajo en IBM brindando soporte técnico para Cognos Analytics, ayudando a resolver problemas complejos en entornos empresariales.
+    <br><br>
+    Me encanta construir soluciones tecnológicas que tengan un impacto real, trabajar en equipo y aprender constantemente. Tengo experiencia en desarrollo full-stack, soporte técnico de nivel empresarial y automatización con Python.
+    <br><br>
+    Mi objetivo es seguir creciendo profesionalmente en áreas como infraestructura cloud, seguridad y desarrollo de productos digitales modernos.
+  </p>
+</section>
+    <section id="tecnicas">
+  <h2>Habilidades Técnicas</h2>
+  <div class="skills-container">
+    <div class="skill-category">
+      <h3>Lenguajes de Programación</h3>
+      <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>SQL</li>
+        <li>HTML / CSS</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Frameworks y Herramientas</h3>
+      <ul>
+        <li>Spring Boot</li>
+        <li>Angular</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>ASP.NET</li>
+        <li>FastAPI</li>
+        <li>Thymeleaf</li>
+        <li>Vite</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Bases de Datos y BI</h3>
+      <ul>
+        <li>MySQL</li>
+        <li>SQL Server</li>
+        <li>MongoDB</li>
+        <li>DB2</li>
+        <li>Cognos Analytics</li>
+        <li>Data Visualization</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Cloud y Seguridad</h3>
+      <ul>
+        <li>Microsoft Azure (Fundamentos)</li>
+        <li>Modelo Zero Trust</li>
+        <li>SSL Troubleshooting</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Herramientas de Desarrollo</h3>
+      <ul>
+        <li>Git / GitHub</li>
+        <li>Docker</li>
+        <li>Postman</li>
+        <li>Swagger</li>
+        <li>VS Code / IntelliJ / Visual Studio / CLion</li>
+        <li>Figma</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section id="blandas">
+  <h2>Habilidades Blandas</h2>
+  <div class="soft-skills-container">
+    <ul>
+      <li>💬 Comunicación efectiva</li>
+      <li>🤝 Trabajo en equipo</li>
+      <li>🧠 Pensamiento crítico</li>
+      <li>🧭 Resolución de problemas</li>
+      <li>🗣️ Presentación y oratoria</li>
+      <li>👥 Liderazgo y mentoría</li>
+      <li>⏳ Gestión del tiempo</li>
+      <li>💡 Adaptabilidad y aprendizaje continuo</li>
+      <li>📚 Proactividad y responsabilidad</li>
+    </ul>
+  </div>
+</section>
+
+    <section id="experiencia">
+  <h2>Experiencia Profesional</h2>
+  <div class="experience-grid">
+
+    <div class="experience-card">
+      <h3>IBM</h3>
+      <p class="role">Software Engineer (Cognos Analytics)</p>
+      <p class="location">San José, Costa Rica | 2025 – Presente</p>
+      <ul>
+        <li>Soporte técnico L2 para Cognos Analytics (cloud y on-prem).</li>
+        <li>Resolución de problemas de servidor, configuración SSL y errores de reportes.</li>
+        <li>Colaboración con equipos globales y contribución a herramientas internas (Python, SQL).</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>IBM</h3>
+      <p class="role">Internship en Inteligencia Artificial & Análisis de Datos</p>
+      <p class="location">San José, Costa Rica | 2024</p>
+      <ul>
+        <li>Automatización de tareas internas con Python (pandas, scikit-learn).</li>
+        <li>Creación de visualizaciones para reportes internos.</li>
+        <li>Presentaciones de análisis a liderazgo técnico.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Tek Experts</h3>
+      <p class="role">Quality Analyst & Relationship Manager (Microsoft)</p>
+      <p class="location">San José, Costa Rica | 2021 – 2023</p>
+      <ul>
+        <li>Manejo de escalaciones de clientes Premier y Unified de Microsoft.</li>
+        <li>Auditoría de casos, capacitación interna y mejora de KPIs.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Concentrix</h3>
+      <p class="role">Representante de soporte Apple</p>
+      <p class="location">San José, Costa Rica | 2021 – 2022</p>
+      <ul>
+        <li>Atención a clientes de LATAM y EE. UU. sobre productos y envíos.</li>
+        <li>Manejo de reclamos y solución de casos complejos.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+    <section id="formacion">
+  <h2>Formación Académica</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024 – Actualidad</div>
+      <div class="timeline-content">
+        <h3>Bachillerato en Ingeniería de Software</h3>
+        <p>Universidad CENFOTEC</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2021 – 2023</div>
+      <div class="timeline-content">
+        <h3>Bachillerato en Administración de Negocios</h3>
+        <p>Universidad de Costa Rica</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2018</div>
+      <div class="timeline-content">
+        <h3>Programa de Refinamiento de Inglés</h3>
+        <p>Harrow House College, Reino Unido</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2020</div>
+      <div class="timeline-content">
+        <h3>Título de Bachiller en Educación Media</h3>
+        <p>Saint Clare School</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <section id="proyectos">
+  <h2>Portafolio de Proyectos</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="assets/img/mentana.png" alt="Mentana" class="project-img" />
+      <h3>Mentana</h3>
+      <p>Plataforma web con juegos cognitivos para adultos mayores. Desarrollada como parte del curso de Proyecto de Ingeniería de Software 3.</p>
+      <p><strong>Tecnologías:</strong> Angular, Spring Boot, MySQL, TypeScript, SCSS</p>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/img/buscard.png" alt="BusCard" class="project-img" />
+      <h3>BusCard</h3>
+      <p>Prototipo de sistema para pago y trazabilidad de transporte público mediante tarjetas inteligentes.</p>
+      <p><strong>Tecnologías:</strong> Java, Arduino, Firebase, diseño UX con Figma</p>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/img/gohealth.JPG" alt="GoHealth" class="project-img" />
+      <h3>GoHealth</h3>
+      <p>Aplicación web para gestión de citas médicas, historial clínico y directorio de doctores.</p>
+      <p><strong>Tecnologías:</strong> React, Node.js, MongoDB, Express</p>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/img/cnp.jpg" alt="Sistema CNP" class="project-img" />
+      <h3>Sistema CNP</h3>
+      <p>Sistema de pedidos de productos agrícolas para el Consejo Nacional de Producción en Costa Rica, orientado a escuelas y colegios públicos.</p>
+      <p><strong>Tecnologías:</strong> Java, JSP, MySQL, Bootstrap</p>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/img/multapro.JPG" alt="MultaPro" class="project-img" />
+      <h3>Plataforma Cosevi</h3>
+      <p>Plataforma simulada de gestión de trámites y citas para el Consejo de Seguridad Vial.</p>
+      <p><strong>Tecnologías:</strong> Spring Boot, Thymeleaf, MariaDB</p>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/img/cruduni.JPG" alt="Sistema Universitario" class="project-img" />
+      <h3>CRUD Full Stack</h3>
+      <p>Gestor de usuarios con funcionalidades CRUD backend para una universidad.</p>
+      <p><strong>Tecnologías:</strong> Java, Spring Boot, Angular, REST API, PostgreSQL</p>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/img/sumobot.JPG" alt="Sumobot Maker Faire" class="project-img" />
+      <h3>Sumobot Maker Faire</h3>
+      <p>Mentoría y desarrollo de robots de combate con Arduino para estudiantes de colegio participantes en la Maker Faire 2025 como IBMentor.</p>
+      <p><strong>Tecnologías:</strong> Arduino, sensores, lógica de control</p>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/img/ecoware.png" alt="EcoWare" class="project-img" />
+      <h3>EcoWare</h3>
+      <p>Proyecto académico sobre emprendimiento tecnológico para la gestión de residuos y economía circular.</p>
+      <p><strong>Tecnologías:</strong> Investigación legal, Figma, HTML/CSS</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="cv">
+      <h2>Descargar CV</h2>
+      <div class="cv-buttons">
+        <a href="Camilla-Quiros-CV-ES.pdf" class="button" download target="_blank">📄 CV en Español</a>
+        <a href="Camilla-Quiros-CV-EN.pdf" class="button" download target="_blank">📄 CV in English</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Camilla Quirós Torres</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    function toggleForm() {
+      const form = document.getElementById("form-container");
+      form.classList.toggle("hidden");
+    }
+
+    const form = document.querySelector('.contact-form');
+    const mensajeExito = document.getElementById('mensaje-exito');
+    const formContainer = document.getElementById('form-container');
+
+    form.addEventListener('submit', function (e) {
+
+      mensajeExito.classList.remove('oculto');
+      mensajeExito.classList.add('visible');
+      form.reset();
+
+      setTimeout(() => {
+        mensajeExito.classList.remove('visible');
+        mensajeExito.classList.add('oculto');
+        formContainer.classList.add('hidden');
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
